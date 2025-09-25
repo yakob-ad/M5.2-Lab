@@ -14,6 +14,9 @@ showHideBtn.onclick = function() {
     showHideBtn.textContent = 'Show comments';
     commentWrapper.style.display = 'none';
   }
+
+  // Set aria-expanded to true if commentWrapper is displayed. False otherwise.
+  showHideBtn.setAttribute('aria-expanded', String(commentWrapper.style.display === 'block'));
 };
 
 // functionality for adding a new comment via the comments form
